@@ -1,0 +1,6 @@
+$schema: https://azuremlschemas.azureedge.net/latest/workspace.schema.json
+name: mlw-dp100-explore
+location: eastus
+display_name: Workspace for dp100-explore-workspace
+description: This example shows a YML configuration for a basic workspace. The resource group, workspace and associated Azure resources will be automatically created.
+resource_group: rg-dp100-explore
