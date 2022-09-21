@@ -117,7 +117,7 @@ Any time you run a script or pipeline in the Azure Machine Learning workspace, i
 
 When you run a script or pipeline as a job, you can define any inputs and document any outputs. Azure Machine Learning also automatically keeps track of your job's properties. By using jobs, you can easily view your history to understand what you or your colleagues have already done. During experimentation, jobs help keep track of the different models you train to compare and identify the best model. During production, jobs allow you to check whether automated workloads ran as expected.
 
-1. When your job is completed, you can also view the details of each individual component run, including the output. Feel free to explore the pipeline to understand how the model is trained.
+7. When your job is completed, you can also view the details of each individual component run, including the output. Feel free to explore the pipeline to understand how the model is trained.
 
 ## Stop your compute instance
 
