@@ -119,11 +119,21 @@ When you run a script or pipeline as a job, you can define any inputs and docume
 
 7. When your job is completed, you can also view the details of each individual component run, including the output. Feel free to explore the pipeline to understand how the model is trained.
 
-## Stop your compute instance
+## Delete Azure resources
 
-If you've finished exploring Azure Machine Learning for now, you should shut down your compute instance to avoid incurring unnecessary charges in your Azure subscription.
+When you finish exploring Azure Machine Learning, you should **either**:
+- Minimize costs by stopping the compute instance if you want to reuse the workspace for other exercises.
+- Delete all Azure resources you created.
 
+### Minimize costs and stop the compute instance
 1. In Azure Machine Learning studio, on the **Compute** page, select your compute instance.
 2. Click **Stop** to stop your compute instance. When it has shut down, its status will change to **Stopped**.
 
-> **Note**: Stopping your compute ensures your subscription won't be charged for compute resources. You will however be charged a small amount for data storage as long as the Azure Machine Learning workspace exists in your subscription. If you have finished exploring Azure Machine Learning, you can delete the Azure Machine Learning workspace and associated resources. However, if you plan to complete any other labs in this series, you will need to repeat this lab to create the workspace and prepare the environment first.
+> **Note**: Stopping your compute ensures your subscription won't be charged for compute resources. You will however be charged a small amount for data storage as long as the Azure Machine Learning workspace exists in your subscription.
+
+### Delete all Azure resources you created
+1. Close the Azure Machine Learning Studio tab and return to the Azure portal.
+1. In the Azure portal, on the **Home** page, select **Resource groups**.
+1. Select the **rg-dp100-explore** resource group.
+1. At the top of the **Overview** page for your resource group, select **Delete resource group**. 
+1. Enter the resource group name to confirm you want to delete it, and select **Delete**.

@@ -154,20 +154,49 @@ Now that you've verified that the necessary compute has been created, you can us
 1. Open the **Labs/Run-training-script.ipynb** notebook.
 1. Run all cells in the notebook. 
 
+<br>
+<details>
+<summary><b>Click here if you have the error:</b> Authenticate</summary>
+You need to authenticate on the compute instance. 
+</details>
+<br>
+
 A new job will be created in the Azure Machine Learning workspace. The job tracks the inputs defined in the job configuration, the code used, and the outputs like metrics to evaluate the model.
 
 ## Review your job history in the Azure Machine Learning Studio
 
 When you submit a job to the Azure Machine Learning workspace, you can review its status in the Azure Machine Learning Studio.
 
-1. In the Azure Machine Learning Studio, navigate to the **Jobs** page.
-1. A new experiment is listed named **dp100-explore-workspace**
+1. Either select the job URL provided as output in the notebook, or navigate to the **Jobs** page in the Azure Machine Learning Studio.
+1. A new experiment is listed named **diabetes-training**. Select the latest job **diabetes-pythonv2-train**.
+1. Review the job's **Properties**. Note the job **Status**: 
+    - **Queued**: The job is waiting for compute to become available.
+    - **Preparing**: The compute cluster is resizing or the environment is being installed on the compute target.
+    - **Running**: The training script is being executed. 
+    - **Finalizing**: The training script ran and the job is being updated with all final information.
+    - **Completed**: The job successfully completed and is terminated.
+    - **Failed**: The job failed and is terminated.
+1. When the job is completed, you can find the *AUC* and *Accuracy* of the model under **Metrics**. 
+1. Under **Outputs + logs**, you'll find:
+    - The model pickle file in the folder **outputs**. 
+    - The output of the script in **user_logs/std_log.txt**. Output from `print` statements in the script will show here. If there's an error because of a problem with your script, you'll find the error message here too.
+1. Under **Code**, you'll find the folder you specified in the job configuration. This folder includes the training script and dataset.
 
-## Stop your compute instance
+## Delete Azure resources
 
-If you've finished exploring Azure Machine Learning for now, you should shut down your compute instance to avoid incurring unnecessary charges in your Azure subscription.
+When you finish exploring Azure Machine Learning, you should **either**:
+- Minimize costs by stopping the compute instance if you want to reuse the workspace for other exercises.
+- Delete all Azure resources you created.
 
+### Minimize costs and stop the compute instance
 1. In Azure Machine Learning studio, on the **Compute** page, select your compute instance.
 2. Click **Stop** to stop your compute instance. When it has shut down, its status will change to **Stopped**.
 
-> **Note**: Stopping your compute ensures your subscription won't be charged for compute resources. You will however be charged a small amount for data storage as long as the Azure Machine Learning workspace exists in your subscription. If you have finished exploring Azure Machine Learning, you can delete the Azure Machine Learning workspace and associated resources. However, if you plan to complete any other labs in this series, you will need to repeat this lab to create the workspace and prepare the environment first.
+> **Note**: Stopping your compute ensures your subscription won't be charged for compute resources. You will however be charged a small amount for data storage as long as the Azure Machine Learning workspace exists in your subscription.
+
+### Delete all Azure resources you created
+1. Close the Azure Machine Learning Studio tab and return to the Azure portal.
+1. In the Azure portal, on the **Home** page, select **Resource groups**.
+1. Select the **rg-dp100-explore** resource group.
+1. At the top of the **Overview** page for your resource group, select **Delete resource group**. 
+1. Enter the resource group name to confirm you want to delete it, and select **Delete**.
