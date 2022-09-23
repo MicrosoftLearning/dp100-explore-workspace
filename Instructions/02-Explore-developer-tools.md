@@ -67,7 +67,6 @@ az login
 
 And follow the instructions for interactive login.
 </details>
-<br>
 
 ## Create a compute instance with the Azure CLI
 
@@ -98,8 +97,7 @@ If the following message appears in the Azure Cloud Shell:
 Failed to connect to MSI. Please make sure MSI is configured correctly.
 Get Token request returned: &lt;Response [400]&gt;
 </code>
-
-
+<br>
 Delete the (partially) created compute instance using:
 <code>
 az ml compute delete "&lt;your-compute-instance-name&gt;"
@@ -107,7 +105,7 @@ az ml compute delete "&lt;your-compute-instance-name&gt;"
 
 And rerun the command to create a compute instance with a different name for your compute.
 </details>
-<br>
+
 
 ## Create a compute cluster with the Azure CLI
 
