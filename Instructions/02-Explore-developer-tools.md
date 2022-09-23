@@ -154,13 +154,6 @@ Now that you've verified that the necessary compute has been created, you can us
 1. Open the **Labs/Run-training-script.ipynb** notebook.
 1. Run all cells in the notebook. 
 
-<br>
-<details>
-<summary><b>Click here if you have the error:</b> Authenticate</summary>
-You need to authenticate on the compute instance. 
-</details>
-<br>
-
 A new job will be created in the Azure Machine Learning workspace. The job tracks the inputs defined in the job configuration, the code used, and the outputs like metrics to evaluate the model.
 
 ## Review your job history in the Azure Machine Learning Studio
