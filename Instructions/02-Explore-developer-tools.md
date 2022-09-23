@@ -101,7 +101,7 @@ Get Token request returned: &lt;Response [400]&gt;
 
 Delete the (partially) created compute instance using:
 <code>
-az ml compute delete "<your-compute-instance-name>"
+az ml compute delete "&lt;your-compute-instance-name&gt;"
 </code>
 
 And rerun the command to create a compute instance with a different name for your compute.
