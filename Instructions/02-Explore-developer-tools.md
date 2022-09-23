@@ -99,6 +99,7 @@ Failed to connect to MSI. Please make sure MSI is configured correctly.
 Get Token request returned: &lt;Response [400]&gt;
 </code>
 
+
 Delete the (partially) created compute instance using:
 <code>
 az ml compute delete "&lt;your-compute-instance-name&gt;"
