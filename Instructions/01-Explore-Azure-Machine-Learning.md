@@ -45,6 +45,8 @@ In this exercise, you'll use the Azure portal to provision Azure Machine Learnin
 1. Note the **Assets** section, which includes **Data**, **Jobs**, and **Models** among other things. Assets are either consumed or created when training or scoring a model. Assets are used to train, deploy, and manage your models and can be versioned to keep track of your history.
 1. Note the **Manage** section, which includes **Compute** and **Datastores** among other things. These are infrastructural resources needed to train or deploy a machine learning model. 
 
+![Explore Azure ML Studio](img/lab_01_ex_01_explore_aml.png)
+
 ## Author a training pipeline
 
 To explore the use of the assets and resources in the Azure Machine Learning workspace, let's try and train a model. 
@@ -52,9 +54,17 @@ To explore the use of the assets and resources in the Azure Machine Learning wor
 A quick way to author a model training pipeline is by using the **Designer**.
 
 1. On the left side of the Studio, form the menu, select the **Designer** page.
+
+![Designer Tab](img/lab_01_ex_01_designer.png)
+
 1. You can create a new pipeline from scratch using prebuilt components, but you can also explore a sample. Select the **Regression - Automobile Price Prediction (Basic)** sample.
+
+![Regression - Automobile Price Prediction (Basic)](img/lab_01_ex_01_regression.png)
+
 1. Note a new pipeline appears. At the top of the pipeline, a component is shown to load **Automobile price data (raw)**. Next, the pipeline processes the data and trains a linear regression model to predict the price for each automobile.
 1. Select **Submit** at the top of the page. An error appears as you have not select a compute target yet. The pipeline can't run without compute resources. 
+
+![Error - No Compute](img/lab_01_ex_01_error_no_compute.png)
 
 Let's create a compute target.
 
