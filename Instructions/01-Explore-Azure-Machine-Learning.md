@@ -126,6 +126,9 @@ Any time you run a script or pipeline in the Azure Machine Learning workspace, i
 1. Navigate to the **Jobs** page, using the menu on the left side of the Azure Machine Learning Studio.
 1. Select the `train-regression-designer` experiment to view its job runs. Here, you'll see an overview of all jobs that are part of this experiment. If you ran multiple training pipelines, this view allows you to compare the pipelines and identify the best one.
 1. Select the last job in the `train-regression-designer` experiment.
+
+![Explore Jobs](img/lab_01_ex_01_explore_jobs)
+
 1. Note that the training pipeline is shown where you can view which components ran successfully or failed. If the job is still running, you can also identify what is currently being run.
 1. To view the pipeline job details, select the **Job overview** at the top right to expand the **Pipeline job overview**. 
 1. Note that in the **Overview** parameters, you can find the job's status, who created the pipeline, when it was created and how long it took to run the complete pipeline (among other things).
