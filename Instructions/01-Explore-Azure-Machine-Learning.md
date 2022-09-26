@@ -109,6 +109,9 @@ You've created a compute target and can now run your sample training pipeline in
 1. Select **Compute instance** under **Select compute type**.
 1. Select your newly created compute instance under **Select Azure ML compute cluster**. 
 1. Select **Submit** to run the training pipeline again.
+
+![Attach Compute](img/lab_01_ex_01_attach_compute_to_pipeline.png)
+
 1. A pop-up will appear to set up the pipeline job. Configure and submit a new pipeline job with the following settings:
     - **Experiment**: Create new
     - **New experiment name**: `train-regression-designer`
