@@ -82,7 +82,7 @@ To train a machine learning model that you authored with the Designer, you can u
         - **Assign to another user**: Unselected *(you can use this to assign a compute instance to a data scientist)*
         - **Provision with setup script**: Unselected *(you can use this to add a script to run on the remote instance when created)*
 
-![Compute Instances tab in Azure ML Studio](./lab_01_ex_01_compute.png)
+![Compute Instances tab in Azure ML Studio](img/lab_01_ex_01_compute.png)
 
 3. Wait for the compute instance to start and its state to change to **Running**.
 
