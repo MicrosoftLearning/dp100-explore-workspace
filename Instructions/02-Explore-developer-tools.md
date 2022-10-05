@@ -42,17 +42,17 @@ To start, open the Azure Cloud Shell, install the Azure Machine Learning extensi
     ```
 1. Create a resource group. Choose a location close to you.
     ```azurecli
-    az group create --name "rg-dp100-explore" --location "eastus"
+    az group create --name "rg-dp100-labs" --location "eastus"
     ```
 1. Create a workspace:
     ```azurecli
-    az ml workspace create --name "mlw-dp100-explore" -g "rg-dp100-explore"
+    az ml workspace create --name "mlw-dp100-labs" -g "rg-dp100-labs"
     ```
 1. Wait for the workspace and its associated resources to be created - this typically takes around 5 minutes. 
 
 <br>
 <details>
-<summary><b>Click here if you have the error:</b> Failed to connect to MSI</summary>
+<summary>Click here if you have the error: <span style="background-color: #FF0000"><font color="white"> Failed to connect to MSI. </span></font></summary>
 If the following message appears in the Azure Cloud Shell:
 
 <code>
@@ -80,17 +80,17 @@ In this exercise, you'll create a compute instance with the following settings:
 - **Compute name**: *Name of compute instance. Has to be unique and fewer than 24 characters.*
 - **Virtual machine size**: STANDARD_DS11_V2
 - **Compute type** (instance or cluster): ComputeInstance
-- **Azure Machine Learning workspace name**: mlw-dp100-explore
-- **Resource group**: rg-dp100-explore
+- **Azure Machine Learning workspace name**: mlw-dp100-labs
+- **Resource group**: rg-dp100-labs
 
 1. Replace "XX" with your initials in the command below. Then, use the command to create a compute instance in your workspace.
     ```azurecli
-    az ml compute create --name "vm-dev-XX" --size STANDARD_DS11_V2 --type ComputeInstance -w mlw-dp100-explore -g rg-dp100-explore
+    az ml compute create --name "vm-dev-XX" --size STANDARD_DS11_V2 --type ComputeInstance -w mlw-dp100-labs -g rg-dp100-labs
     ```
 
 <br>
 <details>
-<summary><b>Click here if you have the error:</b> A compute instance with this name already exists.</summary>
+<summary>Click to troubleshoot the error: <span style="background-color: #FF0000"><font color="white">A compute instance with this name already exists.</span></font></summary>
 If the following message appears in the Azure Cloud Shell:
 
 <code>
@@ -118,19 +118,19 @@ You'll create a compute cluster with the following settings:
 - **Virtual machine size**: STANDARD_DS11_V2
 - **Compute type**: AmlCompute *(Creates a compute cluster)*
 - **Maximum instances**: *Maximum number of nodes*
-- **Azure Machine Learning workspace name**: mlw-dp100-explore
-- **Resource group**: rg-dp100-explore
+- **Azure Machine Learning workspace name**: mlw-dp100-labs
+- **Resource group**: rg-dp100-labs
 
 1. Replace "XX" with your initials in the command below. Then, use the command to create a compute cluster in your workspace.
     ```azurecli
-    az ml compute create --name "vm-cluster-XX" --size STANDARD_DS11_V2 --max-instances 2 --type AmlCompute -w mlw-dp100-explore -g rg-dp100-explore
+    az ml compute create --name "vm-cluster-XX" --size STANDARD_DS11_V2 --max-instances 2 --type AmlCompute -w mlw-dp100-labs -g rg-dp100-labs
     ```
 
 ## Configure your work station with the Azure Machine Learning Studio
 
 Though the Azure CLI is ideal for automation, you may want to review the output of the commands you executed. You can use the Azure Machine Learning Studio to check whether resources and assets have been created, and to check whether jobs ran successfully or review why a job failed. 
 
-1. In the Azure portal, navigate to the Azure Machine Learning workspace named `mlw-dp100-explore`.
+1. In the Azure portal, navigate to the Azure Machine Learning workspace named `mlw-dp100-labs`.
 1. Select the Azure Machine Learning workspace, and in its **Overview** page, select **Launch studio**. Another tab will open in your browser to open the Azure Machine Learning Studio.
 1. Within the Azure Machine Learning Studio, navigate to the **Compute** page and verify that the compute instance and cluster you created in the previous section exist. The compute instance should be running, the cluster should be idle and have 0 nodes running.
 
@@ -189,6 +189,6 @@ When you finish exploring Azure Machine Learning, you should **either**:
 ### Delete all Azure resources you created
 1. Close the Azure Machine Learning Studio tab and return to the Azure portal.
 1. In the Azure portal, on the **Home** page, select **Resource groups**.
-1. Select the **rg-dp100-explore** resource group.
+1. Select the **rg-dp100-labs** resource group.
 1. At the top of the **Overview** page for your resource group, select **Delete resource group**. 
 1. Enter the resource group name to confirm you want to delete it, and select **Delete**.

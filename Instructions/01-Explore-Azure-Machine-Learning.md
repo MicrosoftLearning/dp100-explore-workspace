@@ -22,8 +22,8 @@ In this exercise, you'll use the Azure portal to provision Azure Machine Learnin
 1. Sign into the [Azure portal](https://portal.azure.com).
 2. Create a new **Machine Learning** resource with the following settings:
     - **Subscription**: *Your Azure subscription*
-    - **Resource group**: *Create or select a resource group*
-    - **Workspace name**: *Enter a unique name for your workspace*
+    - **Resource group**: `rg-dp100-labs`
+    - **Workspace name**: `mlw-dp100-labs`
     - **Region**: *Select the geographical region closest to you*
     - **Storage account**: *Note the default new storage account that will be created for your workspace*
     - **Key vault**: *Note the default new key vault that will be created for your workspace*
@@ -134,6 +134,6 @@ When you finish exploring Azure Machine Learning, you should **either**:
 ### Delete all Azure resources you created
 1. Close the Azure Machine Learning Studio tab and return to the Azure portal.
 1. In the Azure portal, on the **Home** page, select **Resource groups**.
-1. Select the **rg-dp100-explore** resource group.
+1. Select the **rg-dp100-labs** resource group.
 1. At the top of the **Overview** page for your resource group, select **Delete resource group**. 
 1. Enter the resource group name to confirm you want to delete it, and select **Delete**.
