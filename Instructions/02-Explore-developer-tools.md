@@ -52,7 +52,7 @@ To start, open the Azure Cloud Shell, install the Azure Machine Learning extensi
 
 <br>
 <details>
-<summary>Click to troubleshoot the error: <span style="background-color: #FF0000"><font color="white">Failed to connect to MSI. </font></summary>
+<summary>Click to troubleshoot the error: Failed to connect to MSI.</summary>
 If the following message appears in the Azure Cloud Shell:
 
 <code>
@@ -90,7 +90,7 @@ In this exercise, you'll create a compute instance with the following settings:
 
 <br>
 <details>
-<summary>Click to troubleshoot the error: <font color="red"><b>A compute instance with this name already exists.</font></b></summary>
+<summary>Click to troubleshoot the error: <b>A compute instance with this name already exists.</b></summary>
 
 If the following message appears in the Azure Cloud Shell:
 
