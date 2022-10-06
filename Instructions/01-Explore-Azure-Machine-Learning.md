@@ -45,6 +45,8 @@ In this exercise, you'll use the Azure portal to provision Azure Machine Learnin
 1. Note the **Assets** section, which includes **Data**, **Jobs**, and **Models** among other things. Assets are either consumed or created when training or scoring a model. Assets are used to train, deploy, and manage your models and can be versioned to keep track of your history.
 1. Note the **Manage** section, which includes **Compute** and **Datastores** among other things. These are infrastructural resources needed to train or deploy a machine learning model. 
 
+![Explore Azure ML Studio](img/lab_01_ex_01_explore_aml.png)
+
 ## Author a training pipeline
 
 To explore the use of the assets and resources in the Azure Machine Learning workspace, let's try and train a model. 
@@ -52,9 +54,17 @@ To explore the use of the assets and resources in the Azure Machine Learning wor
 A quick way to author a model training pipeline is by using the **Designer**.
 
 1. On the left side of the Studio, form the menu, select the **Designer** page.
+
+![Designer Tab](img/lab_01_ex_01_designer.png)
+
 1. You can create a new pipeline from scratch using prebuilt components, but you can also explore a sample. Select the **Regression - Automobile Price Prediction (Basic)** sample.
+
+![Regression - Automobile Price Prediction (Basic)](img/lab_01_ex_01_regression.png)
+
 1. Note a new pipeline appears. At the top of the pipeline, a component is shown to load **Automobile price data (raw)**. Next, the pipeline processes the data and trains a linear regression model to predict the price for each automobile.
 1. Select **Submit** at the top of the page. An error appears as you have not select a compute target yet. The pipeline can't run without compute resources. 
+
+![Error - No Compute](img/lab_01_ex_01_error_no_compute.png)
 
 Let's create a compute target.
 
@@ -82,6 +92,8 @@ To train a machine learning model that you authored with the Designer, you can u
         - **Assign to another user**: Unselected *(you can use this to assign a compute instance to a data scientist)*
         - **Provision with setup script**: Unselected *(you can use this to add a script to run on the remote instance when created)*
 
+![Compute Instances tab in Azure ML Studio](img/lab_01_ex_01_compute.png)
+
 3. Wait for the compute instance to start and its state to change to **Running**.
 
 > **Note**:
@@ -97,6 +109,9 @@ You've created a compute target and can now run your sample training pipeline in
 1. Select **Compute instance** under **Select compute type**.
 1. Select your newly created compute instance under **Select Azure ML compute cluster**. 
 1. Select **Submit** to run the training pipeline again.
+
+![Attach Compute](img/lab_01_ex_01_attach_compute_to_pipeline.png)
+
 1. A pop-up will appear to set up the pipeline job. Configure and submit a new pipeline job with the following settings:
     - **Experiment**: Create new
     - **New experiment name**: `train-regression-designer`
@@ -111,6 +126,9 @@ Any time you run a script or pipeline in the Azure Machine Learning workspace, i
 1. Navigate to the **Jobs** page, using the menu on the left side of the Azure Machine Learning Studio.
 1. Select the `train-regression-designer` experiment to view its job runs. Here, you'll see an overview of all jobs that are part of this experiment. If you ran multiple training pipelines, this view allows you to compare the pipelines and identify the best one.
 1. Select the last job in the `train-regression-designer` experiment.
+
+![Explore Jobs](img/lab_01_ex_01_explore_jobs.png)
+
 1. Note that the training pipeline is shown where you can view which components ran successfully or failed. If the job is still running, you can also identify what is currently being run.
 1. To view the pipeline job details, select the **Job overview** at the top right to expand the **Pipeline job overview**. 
 1. Note that in the **Overview** parameters, you can find the job's status, who created the pipeline, when it was created and how long it took to run the complete pipeline (among other things).
@@ -128,6 +146,8 @@ When you finish exploring Azure Machine Learning, you should **either**:
 ### Minimize costs and stop the compute instance
 1. In Azure Machine Learning studio, on the **Compute** page, select your compute instance.
 2. Click **Stop** to stop your compute instance. When it has shut down, its status will change to **Stopped**.
+
+![Stop Compute Instance](img/lab_01_ex_01_stop_compute.png)
 
 > **Note**: Stopping your compute ensures your subscription won't be charged for compute resources. You will however be charged a small amount for data storage as long as the Azure Machine Learning workspace exists in your subscription.
 
