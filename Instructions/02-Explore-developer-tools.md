@@ -90,7 +90,8 @@ In this exercise, you'll create a compute instance with the following settings:
 
 <br>
 <details>
-<summary>Click to troubleshoot the error: <span style="background-color: #FF0000"><font color="white">A compute instance with this name already exists.</span></font></summary>
+<summary>Click to troubleshoot the error: <font color="red"><b>A compute instance with this name already exists.</font></b></summary>
+
 If the following message appears in the Azure Cloud Shell:
 
 <code>
