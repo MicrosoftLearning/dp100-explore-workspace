@@ -52,7 +52,7 @@ To start, open the Azure Cloud Shell, install the Azure Machine Learning extensi
 
 <br>
 <details>
-<summary>Click here if you have the error: <span style="background-color: #FF0000"><font color="white"> Failed to connect to MSI. </span></font></summary>
+<summary>Click to troubleshoot the error: <span style="background-color: #FF0000"><font color="white">Failed to connect to MSI.</span></font></summary>
 If the following message appears in the Azure Cloud Shell:
 
 <code>
