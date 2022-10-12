@@ -32,19 +32,23 @@ To start, open the Azure Cloud Shell, install the Azure Machine Learning extensi
 1. The first time you open the cloud shell, you will be asked to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**.
 1. If you are asked to create storage for your cloud shell, check that the correct subscription is specified and select **Create storage**. Wait for the storage to be created.
 1. To avoid any conflicts with previous versions, remove any ML CLI extensions (both version 1 and 2) with this command:
+
     ```
     az extension remove -n azure-cli-ml
     az extension remove -n ml
     ```
 1. Install the Azure Machine Learning (v2) extension with the following command:
+
     ```
     az extension add -n ml -y
     ```
 1. Create a resource group. Choose a location close to you.
+
     ```azurecli
     az group create --name "rg-dp100-labs" --location "eastus"
     ```
 1. Create a workspace:
+
     ```azurecli
     az ml workspace create --name "mlw-dp100-labs" -g "rg-dp100-labs"
     ```
@@ -84,6 +88,7 @@ In this exercise, you'll create a compute instance with the following settings:
 - **Resource group**: rg-dp100-labs
 
 1. Replace "XX" with your initials in the command below. Then, use the command to create a compute instance in your workspace.
+
     ```azurecli
     az ml compute create --name "vm-dev-XX" --size STANDARD_DS11_V2 --type ComputeInstance -w mlw-dp100-labs -g rg-dp100-labs
     ```
@@ -123,6 +128,7 @@ You'll create a compute cluster with the following settings:
 - **Resource group**: rg-dp100-labs
 
 1. Replace "XX" with your initials in the command below. Then, use the command to create a compute cluster in your workspace.
+
     ```azurecli
     az ml compute create --name "vm-cluster-XX" --size STANDARD_DS11_V2 --max-instances 2 --type AmlCompute -w mlw-dp100-labs -g rg-dp100-labs
     ```
@@ -141,11 +147,13 @@ Now that you've verified that the necessary compute has been created, you can us
 
 1. Select the **Terminal** application for your **compute instance** to launch the terminal.
 1. In the terminal, install the Python SDK on the compute instance by running the following commands in the terminal:
+
     ```
     pip uninstall azure-ai-ml
     pip install azure-ai-ml
     ```
 1. Run the following command to clone a Git repository containing a notebook, data, and other files to your workspace:
+
     ```
     git clone https://github.com/MicrosoftLearning/dp100-explore-workspace.git dp100-explore-workspace
     ``` 
